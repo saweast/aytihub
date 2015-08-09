@@ -16,6 +16,7 @@ body {
 img {
   max-width: 100%;
   height: auto;
+  width: 70%;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -173,7 +174,7 @@ strong {
 
 * + h3 {
   margin-top: 30px;
-  word-break: break-all;
+/*  word-break: break-all;*/
 }
 
 * + h5 {
@@ -800,7 +801,7 @@ label.invalid .error {
 header {
   background: white;
   text-align: center;
-  padding-top: 75px;
+  padding-top: 25px;
   padding-bottom: 23px;
 }
 header h2 {
@@ -858,7 +859,7 @@ main {
 }
 
 .well2 {
-  padding-top: 90px;
+  padding-top: 50px;
   padding-bottom: 93px;
 }
 .well2__ins1 {
@@ -866,7 +867,7 @@ main {
 }
 
 .well3 {
-  padding-top: 199px;
+  padding-top: 49px;
   padding-bottom: 100px;
 }
 @media (max-width: 479px) {
@@ -930,6 +931,7 @@ main {
 .bg-image2 {
     background: url('../imgs/page-1_img02.png') no-repeat -25px bottom;
     background-size: contain;
+  background: url('../imgs/student.png') no-repeat 0px bottom;
 }
 @media (max-width: 1199px) {
   .bg-image2 {
@@ -1234,7 +1236,7 @@ blockquote img {
     font-size: 0px;
     line-height: 0;
     border-radius: 50%;
-    background: transparent url('/imgs/arrow-download-icon.png');
+    background: transparent url('some/imgs/arrow-download-icon.png');
     background-size: 100% 100%;
 height: 50px;
 width: 50px;
@@ -1246,4 +1248,8 @@ margin-top: -10px;
     background-size: 100% 100%;
     cursor: pointer;
   }
+}
+li a {
+  color: #00bbd3;
+  text-decoration: underline;
 }
