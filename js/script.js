@@ -17,17 +17,17 @@ include('js/jquery.easing.1.3.js');
 
 /* ToTop
  ========================================================*/
-;
-(function ($) {
-    var o = $('html');
-    if (o.hasClass('desktop')) {
-        include('js/jquery.ui.totop.js');
-
-        $(document).ready(function () {
-            $().UItoTop({easingType: 'easeOutQuart'});
-        });
-    }
-})(jQuery);
+//;
+//(function ($) {
+//    var o = $('html');
+//    if (o.hasClass('desktop')) {
+//        include('js/jquery.ui.totop.js');
+//
+//        $(document).ready(function () {
+//            $().UItoTop({easingType: 'easeOutQuart'});
+//        });
+//    }
+//})(jQuery);
 
 /* EqualHeights
  ========================================================*/
@@ -185,11 +185,26 @@ $(document).ready(function(){
             $('input#name').focus();
             $('input#name').closest('form').addClass('blue');
         });
+      $('a#wantLearnFixed').click(function(e) {
+            e.preventDefault();
+            smoothScroll($($.attr(this, 'href')));
+            $('input#name').focus();
+            $('input#name').closest('form').addClass('blue');
+        });
         // Public API
         return {
             to: smoothScroll
         };
     })();
+
+  window.onscroll = function() {
+    if(window.pageYOffset > 500) {
+      if (window.innerWidth > 1200)
+        $('div.fixed-download').show();
+    }
+    else
+      $('div.fixed-download:first').hide();
+  }
 
 function markAs(elem, color, delay) {
     elem.removeClass('yellow');
